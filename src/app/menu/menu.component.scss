@@ -7,7 +7,7 @@
     width: 18%; 
     min-width: 160px;
     height: 850px; 
-    margin-left: 5%; 
+    margin-left: 10%; 
     margin-top: 60px; 
     margin-bottom: 10%; 
     border-radius: 4px; 
@@ -15,7 +15,7 @@
     position: relative;
     z-index: 10;
 }
-@media (max-width: 900px) {
+@media (max-width: 920px) {
     .menu-bg{
         margin-left: -50%; 
         background-color: rgba(255, 250, 253, 1);
@@ -23,9 +23,9 @@
         width: 200px;
     }
 }
-@media (min-width: 921px) {
+@media (min-width: 920.01px) {
     .menu-bg{
-        margin-left: 5% !important; 
+        margin-left: 7% !important; 
     }
 }
 #logo{

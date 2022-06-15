@@ -163,7 +163,7 @@ function renderEarnChart(ctx, earnData){
                     '#eeeeee',
                 ],
                 borderWidth: 0,
-                borderRadius: [30,0,30,0],
+                borderRadius: [30,30,30,0],
                 
             }]
         },

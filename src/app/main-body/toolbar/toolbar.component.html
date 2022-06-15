@@ -8,7 +8,7 @@
       
         <div class="col-1"  *ngFor="let item of toolbarItemsImgUrls; let i=index" type="button" id="toolbar-item-{{i}}">
           
-          <div *ngIf="i == 0"class="item-with-no-notification">
+          <div *ngIf="i == 0" class="item-with-no-notification">
             <img routerLink="/403" src={{toolbarItemsImgUrls[i]}} width="17px" height="17px"/>           
           </div> 
 
