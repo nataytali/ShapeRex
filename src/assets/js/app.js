@@ -1,24 +1,8 @@
+let dataFile = require('./data.json');
+
 // Statistics
 var statistics;
-var statisticsData = {
-    years: [2018, 2019, 2020, 2021],
-    labels: [
-        ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep","Oct", "Nov", "Dec"],
-        ["Winter", "Spring", "Summer", "Autumn"]
-    ],
-    points:[
-        [180, 150, 160, 200, 235, 250, 230, 190, 170, 190, 250, 300],
-        [320, 250, 210, 180, 230, 260, 240, 200, 190, 200, 210, 200],
-        [180, 150, 160, 200, 235, 250, 260, 220, 190, 200, 250, 340],
-        [350, 300, 290, 300, 270, 250, 230, 270, 300, 310, 350, 400]
-    ] ,
-    pointhForSeason: [
-        [490, 685, 590, 740],
-        [780, 670, 630, 610],
-        [490, 685, 670, 790],
-        [940, 820, 800, 1060]
-    ]
-}
+var statisticsData = dataFile.statisticsData;
 const statsData = {
     categoryPercentage: 50,
     labels: statisticsData.labels[0],
@@ -106,7 +90,8 @@ function updateStatsLabel(label){
         var index = statisticsData.points.indexOf(statistics.data.datasets[0].data);
         statistics.data.datasets[0].data = statisticsData.pointhForSeason[index]
     }
-    statistics.data.labels = statisticsData.labels[label]
+    statistics.data.labels = statisticsData.labels[label];
+    console.log("hello");
     statistics.update();
 }
 function renderStatsChart(ctx, statsData){
@@ -116,29 +101,24 @@ function renderStatsChart(ctx, statsData){
         options: {
             maintainAspectRatio: false,
             responsive: false,
+            elements: { point:{ hitRadius: 5} },
+            events: ['mousemove'],
             plugins: {
-                title: {
-                    display: false,
-                    text: 'Chart.js Line Chart - Cubic interpolation mode'
-                },
-                legend: {
-                    display: false
-                },
+                tooltip: { events: ['mousemove'] },
+                title: { display: false },
+                legend: { display: false },
             },
             interaction: {
                 intersect: true,
+                axis: 'x',
+                mode: 'point'
             },
             scales: {
                 x: {
                     display: true,
-                    title: {
-                        display: false
-                    },
+                    title: { display: false },
                     stacked: true,
-                    ticks:{
-                        minRotation: 0
-                        
-                    },
+                    ticks: { minRotation: 0 },
                     grid:{
                         display: false,
                         tickBorderDash: [0, 10],
@@ -147,11 +127,8 @@ function renderStatsChart(ctx, statsData){
                     grace:1
                 },  
                 y: {
-                    
                     display: true,
-                    title: {
-                        display: false,
-                    },
+                    title: { display: false },
                     suggestedMin: 0,
                     suggestedMax: 500,
                     ticks:{
@@ -166,14 +143,7 @@ function renderStatsChart(ctx, statsData){
 
 //Earning
 var earning;
-var earningData = {
-    percentOne: 25,
-    percentTwo: 35,
-    percentThree: 15,
-    deposit: 20541875574.00,
-    expense: 541875574.00,
-    payable: 805875574.00
-}
+var earningData = dataFile.earningData;
 let earnData =  [
     earningData.percentOne, 
     earningData.percentTwo, 
@@ -212,33 +182,18 @@ function updateEarnConfigByMutating(earnArr) {
 }
 
 //Sales
-var salesData = {
-    monthlySale: 20541,
-    yearlySale: 2054125,
-    monthlyPercent: 50,
-    yearlyPercent: 70,
-    monthlyIndicator: 'down',
-    yearlyIndicator: 'up'
-
-}
+var salesData = dataFile.salesData;
 
 window.onload = function() {  
-
+ 
     // Statistics Chart  
     const ctxStats = document.getElementById('statistics').getContext('2d');
     renderStatsChart(ctxStats, statsData);
-    //updateStatsConfigByMutating(3,0);     
-    //updateStatsLabel(1);
-    //updateStatsLabel(0);
-    //updateStatsLabel(0);
-    //updateStatsYear(3);
-    //updateStatsLabel(1);
-    //updateStatsLabel(0);
-    //updateStatsLabel(1);
     
     // Earning Chart
     const ctxEarn = document.getElementById('myChart').getContext('2d');
     renderEarnChart(ctxEarn,earnData);
-    //updateEarnConfigByMutating([20,20,5,55])
+
 }
+
 export {earningData, updateStatsYear, updateStatsLabel, salesData }

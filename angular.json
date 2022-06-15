@@ -35,8 +35,7 @@
               "src/styles.scss"
             ],
             "scripts": [
-            "src/assets/js/app.js",
-            "src/assets/js/not-found.js"
+            "src/assets/js/app.js"
           ]
           },
           "configurations": {
