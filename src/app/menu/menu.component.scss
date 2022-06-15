@@ -1,8 +1,7 @@
 // src/sass/styles.scss
-@import './menu.variables.scss';
-@import './menu.mixims.scss';
 @import url('https://fonts.googleapis.com/css?family=Poppins');
-
+@import '../../sass/mixins';
+@import '../../sass/variables';
 
 .menu-bg  {
     width: 18%; 
@@ -15,7 +14,6 @@
     background-color: rgba(255, 250, 253, 0.5);
     position: relative;
     z-index: 10;
-
 }
 @media (max-width: 900px) {
     .menu-bg{
@@ -60,7 +58,7 @@
 }
 mat-sidenav-content{
     &:hover{
-        color:#ff8600;
+        color:$orange;
         img{
             filter: saturate(100) hue-rotate(160deg) brightness(1.5);
         }
@@ -68,8 +66,7 @@ mat-sidenav-content{
     a{    
         color: inherit;
         text-decoration: inherit;   
-    }
-    
+    }  
 }
 #logout{
     margin-top: 440px;
@@ -82,5 +79,5 @@ mat-sidenav-content{
     }
 }
 .active-menu-item{
-    color: #ff8600;
+    color: $orange;
 }
