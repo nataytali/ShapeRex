@@ -16,7 +16,7 @@ import { Component} from '@angular/core';
             <img  src={{imgs[i]}} width="10px" height="15px"/>&nbsp;&nbsp;{{item}}       
           </a>
           </mat-sidenav-content>
-        <mat-sidenav-content id="logout" type="button"><img  src="assets/img/logout.png" width="18px" height="15px"/>&nbsp;&nbsp;Logout</mat-sidenav-content>
+        <mat-sidenav-content routerLink="/403" id="logout" type="button"><img  src="assets/img/logout.png" width="18px" height="15px"/>&nbsp;&nbsp;Logout</mat-sidenav-content>
       </mat-sidenav-container>
     </div>
   </div>`,
