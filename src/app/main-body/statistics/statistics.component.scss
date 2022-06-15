@@ -1,12 +1,13 @@
+@import '../../../sass/variables';
+@import '../../../sass/mixins';
+
 .statistics-card {
     width: 520px;
-    height: 350px;
-    border-radius: 3px;
-    filter: drop-shadow(0 0 60px rgba(31,32,41,0.1));
-    background-color: rgba($color: #ffffff, $alpha: 0.45); 
+    height: 350px; 
     top: 80px;
     left: 290px;
     position: absolute;
+    @include component-card();
 }
 .statistics-card p {   
     margin-top: 10px;

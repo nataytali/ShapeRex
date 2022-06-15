@@ -1,0 +1,39 @@
+@mixin component-card {
+    border-radius: 3px;
+    filter: $shadow;
+    background-color: $cardBg;
+}
+
+@mixin line {
+    margin-left: 15px;
+    margin-bottom: 20px;
+    width: 220px;
+    height: 1px;
+    background-color:  $lineColor;
+}
+
+@mixin cardInfoTable{
+    width: 220px;
+    margin-left: 15px;
+    font-size: 11px;
+    line-height: 30px;
+    color: $lightGray;
+    font-weight: $fontWeight;
+    font-family: $font;
+    .data{
+        color: $darkGray;
+        width: 55%;
+        text-align: right; 
+    }
+    td{
+        width: 45%;
+    }
+}
+@mixin creditCardFontStyle {
+    letter-spacing: 1px;
+    line-height: 40px;
+    color: #ffffff;
+    font-weight: $fontWeight;
+    font-family: $font;
+    font-size: 13px;
+}

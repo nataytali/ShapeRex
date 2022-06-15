@@ -1,12 +1,13 @@
+@import '../../../sass/variables';
+@import '../../../sass/mixins';
+
 .sale-card {
     width: 250px;
-    height: 165px;
-    border-radius: 3px;
-    filter: drop-shadow(0 0 60px rgba(31,32,41,0.1));
-    background-color: rgba($color: #ffffff, $alpha: 0.45); 
+    height: 165px; 
     top: 450px;
     left: 290px;
     position: absolute;
+    @include component-card();
 }
 .sale-card p {   
     margin-top: 10px;
@@ -19,18 +20,18 @@
     margin-left: 15px;
     font-size: 24px;
     line-height: 30px;
-    color: #404447;
-    font-weight: 500;
-    font-family: "Poppins";
+    color: $darkGray;
+    font-weight: $fontWeight;
+    font-family: $font;
     margin-top: 25px;
 }
 .sale-income{
     margin-left: 15px;
     font-size: 13px;
     line-height: 13px;
-    color: #8d99a3;
-    font-weight: 500;
-    font-family: "Poppins";
+    color: $lightGray;
+    font-weight: $fontWeight;
+    font-family: $font;
 }
 .sale-icon{
     width: 73px;
@@ -43,10 +44,10 @@
     align-items: center;
 }
 .monthly-icon{
-    background-color: #ffb35e;
+    background-color: $downOrange;
 }
 .yearly-icon{
-    background-color: #14ba47;
+    background-color: $upGreen;
 }
 .bi {
     display: block;
@@ -62,16 +63,16 @@
     top: 135px;
 }
 #m-point{
-    color: #ffb35e;
+    color: $downOrange;
     left: calc(65*2.5px - 20px);
 }
 #y-point{
-    color: #14ba47;
+    color: $upGreen;
     left: calc(75*2.5px - 20px);
 }
 #monthly-bar{
-    background-color: #ffb35e;
+    background-color: $downOrange;
 }
 #yearly-bar{
-    background-color: #14ba47;
+    background-color: $upGreen;
 }

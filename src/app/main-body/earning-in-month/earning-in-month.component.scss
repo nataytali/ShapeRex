@@ -1,11 +1,12 @@
+@import '../../../sass/variables';
+@import '../../../sass/mixins';
+
 .earning-card {
     width: 250px;
     height: 350px;
-    border-radius: 3px;
-    filter: drop-shadow(0 0 60px rgba(31,32,41,0.1));
-    background-color: rgba($color: #ffffff, $alpha: 0.45); 
     margin-top: 20px;
     margin-left: 20px;
+    @include component-card();
 }
 .earning-card p {   
     position: absolute;
@@ -13,32 +14,12 @@
     margin-left: 15px
 }
 .line{
-    margin-left: 15px;
     margin-top: 50px;
-    margin-bottom: 20px;
-    width: 220px;
-    height: 1px;
-    background-color:  #e4d6d5;;
+    @include line();
 }
 .card-info{
-    width: 220px;
-    margin-left: 15px;
-    font-size: 11px;
-    line-height: 30px;
-    color: #b2b5b8;
-    font-weight: 500;
-    font-family: "Poppins";
-    .data{
-        color: #404447;
-        width: 55%;
-        text-align: right; 
-    }
-    td{
-        width: 45%;
-        
-    }
+    @include cardInfoTable();
 }
-
 canvas{
     width:150px !important;
     height:150px !important;
@@ -53,7 +34,7 @@ canvas{
     font-size: 24px;
     letter-spacing: 2px;
     line-height: 40px;
-    color: #404447;
+    color: $darkGray;
     font-weight: 600;
-    font-family: "Poppins";
+    font-family: $font;
 }

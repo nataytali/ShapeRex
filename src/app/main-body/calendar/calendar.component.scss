@@ -1,12 +1,14 @@
+@import '../../../sass/variables';
+@import '../../../sass/mixins';
+
+
 .calendar-card {
     width: 250px;
     height: 350px;
-    border-radius: 3px;
-    filter: drop-shadow(0 0 60px rgba(31,32,41,0.1));
-    background-color: rgba($color: #ffffff, $alpha: 0.45); 
     top: 450px;
     left: 560px;
     position: absolute;
+    @include component-card();
 }
 .calendar-card p {   
     margin-top: 15px;
@@ -16,14 +18,14 @@
     margin-top: -15px;
     font-size: 11px;
     line-height: 30px;
-    color: #b2b5b8;
+    color: $lightGray;
     font-weight: 500;
-    font-family: "Poppins";
+    font-family: $font;
 }
 .mat-card{
     margin-top: -30px;
     background: none;
-    border: 0px solid green;
+    border: 0px;
     box-shadow: none;
     
 }
@@ -34,26 +36,24 @@
   }
   :host ::ng-deep .mat-calendar-previous-button {
     position: absolute;
-    color: #b2b5b8;
+    color: $lightGray;
     &:hover {
-        color: #ff8600;
+        color: $orange;
       }
-    
-    
   }
   :host ::ng-deep .mat-calendar-next-button {
-    color: #b2b5b8;
+    color: $lightGray;
     &:hover {
-        color: #ff8600;
+        color: $orange;
       }
   }
 :host ::ng-deep .mat-calendar-body-today{
-    background-color: #58deb6;
+    background-color: $green;
     color: white;
-    border: #58deb6;
+    border: $green;
 }
 :host ::ng-deep .mat-calendar-body-selected{
-    background-color: #62a7ff;
+    background-color: $blue;
 }
 .mat-calendar{
     background-color: none;
@@ -66,6 +66,6 @@
     height: 50px;
     border-radius: 3px;
     justify-content: center;
-    background: url("../../../assets/img/calendar-icon.png") #62a7ff no-repeat center center;
-    border: 5px #62a7ff;
+    background: url("../../../assets/img/calendar-icon.png") $blue no-repeat center center;
+    border: 5px $blue;
 }
