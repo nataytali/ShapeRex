@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { salesData } from 'src/assets/js/earning-chart';
+import { salesData } from 'src/assets/js/app';
 
 @Component({
   selector: 'sales',
