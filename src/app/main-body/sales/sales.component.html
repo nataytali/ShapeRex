@@ -1,0 +1,43 @@
+<div class="sale-card" id="monthly-sale">
+    <p>Monthly Sale</p>  
+    <h2 class="sale-sum">{{monthlySale}}</h2>
+    <h6 class="sale-income">Income</h6>
+    <div  *ngIf="monthlyIndicator == 'down'" class="container sale-icon monthly-icon" >
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+          </svg>
+    </div>
+    <div  *ngIf="monthlyIndicator == 'up'"class="container sale-icon yearly-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+          </svg>
+    </div>
+    <div class="progress">
+        <div class="progress-bar" id="monthly-bar" attr.style="width: {{monthlyPercent}}%;" role="progressbar" attr.aria-valuenow="{{monthlyPercent}}" attr.aria-valuemin="0" aria-valuemax="100"></div>
+        <div class="point" id="m-point" attr.style="left: calc({{monthlyPercent}}*2.5px - 20px);">
+            <p>{{monthlyPercent}}%</p>
+        </div>
+    </div>
+</div>
+<div class="sale-card" id="yearly-sale">
+    <p>Yearly Sale</p>  
+    <h2 class="sale-sum">{{yearlySale}}</h2>
+    <h6 class="sale-income">Income</h6>
+    <div  *ngIf="yearlyIndicator == 'down'" class="container sale-icon monthly-icon" >
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+          </svg>
+    </div>
+    <div  *ngIf="yearlyIndicator == 'up'"class="container sale-icon yearly-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+          </svg>
+    </div>
+    <div class="progress">
+        <div class="progress-bar" id="yearly-bar" role="progressbar" attr.style="width: {{yearlyPercent}}%;" attr.aria-valuenow="{{yearlyPercent}}" aria-valuemin="0" aria-valuemax="100"></div>
+        <div class="point" id="y-point" attr.style="left: calc({{yearlyPercent}}*2.5px - 20px);">
+            <p>{{yearlyPercent}}%</p>
+        </div>
+    </div>
+</div>
+

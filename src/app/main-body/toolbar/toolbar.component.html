@@ -1,0 +1,35 @@
+
+  <div class="toolbar d-flex align-items-center">
+    <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" onclick="ShowMenu()" width="20" height="20" class="bi bi-list" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+    </svg>
+    <div class="container" style="width: 95%;">
+    <div class="row justify-content-end">
+      
+        <div class="col-1"  *ngFor="let item of toolbarItemsImgUrls; let i=index" type="button" id="toolbar-item-{{i}}">
+          
+          <div *ngIf="i == 0"class="item-with-no-notification">
+            <img routerLink="/403" src={{toolbarItemsImgUrls[i]}} width="17px" height="17px"/>           
+          </div> 
+
+          <div *ngIf="i == 1 || i == 2" class="item-with-notification">
+            <div class="badge">3</div>       
+            <img routerLink="/403" src={{toolbarItemsImgUrls[i]}} width="17px" height="17px"/>           
+          </div>
+          
+          <div *ngIf="i == 3"class="item-with-no-notification">
+            <div class="dropdown">
+              <button class="dropbtn"><img src={{toolbarItemsImgUrls[i]}} width="17px" height="17px"/></button>
+              <div class="dropdown-content">
+                <a routerLink="/403">My profile</a>
+                <a routerLink="/403">Analytics</a>
+                <a routerLink="/403">Settings</a>
+              </div>
+            </div>           
+          </div>           
+        </div>        
+      </div>
+    </div>
+</div>
+
+

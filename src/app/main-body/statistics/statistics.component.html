@@ -1,0 +1,21 @@
+<div class="statistics-card">
+    <p>Statistics</p>
+    
+    <select (change)="updateYear($event)" class="year-select">
+        <option value= "0" selected>2018</option>
+        <option value= "1">2019</option>
+        <option value= "2">2020</option>
+        <option value= "3">2021</option>
+      </select>
+      <select (change)="updateLabel($event)"   class="month-select">
+        <option value= "0" selected>Month</option>
+        <option value= "1">Season</option>
+      </select>
+    <canvas id="statistics" width="400" height="400"></canvas>
+    
+    
+</div>
+
+
+
+

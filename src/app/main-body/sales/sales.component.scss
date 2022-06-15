@@ -1,0 +1,77 @@
+.sale-card {
+    width: 250px;
+    height: 165px;
+    border-radius: 3px;
+    filter: drop-shadow(0 0 60px rgba(31,32,41,0.1));
+    background-color: rgba($color: #ffffff, $alpha: 0.45); 
+    top: 450px;
+    left: 290px;
+    position: absolute;
+}
+.sale-card p {   
+    margin-top: 10px;
+    margin-left: 15px;
+}
+#yearly-sale{
+    top: 635px;
+}
+.sale-sum {
+    margin-left: 15px;
+    font-size: 24px;
+    line-height: 30px;
+    color: #404447;
+    font-weight: 500;
+    font-family: "Poppins";
+    margin-top: 25px;
+}
+.sale-income{
+    margin-left: 15px;
+    font-size: 13px;
+    line-height: 13px;
+    color: #8d99a3;
+    font-weight: 500;
+    font-family: "Poppins";
+}
+.sale-icon{
+    width: 73px;
+    height: 52px;
+    border-radius: 3px;
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+}
+.monthly-icon{
+    background-color: #ffb35e;
+}
+.yearly-icon{
+    background-color: #14ba47;
+}
+.bi {
+    display: block;
+    margin: 0 auto;
+    filter: invert(99%) sepia(98%) saturate(15%) hue-rotate(240deg) brightness(106%) contrast(100%);
+}
+.progress{
+    margin-top: 48px;
+    height: 3px;
+}
+.point{
+    position: absolute;
+    top: 135px;
+}
+#m-point{
+    color: #ffb35e;
+    left: calc(65*2.5px - 20px);
+}
+#y-point{
+    color: #14ba47;
+    left: calc(75*2.5px - 20px);
+}
+#monthly-bar{
+    background-color: #ffb35e;
+}
+#yearly-bar{
+    background-color: #14ba47;
+}

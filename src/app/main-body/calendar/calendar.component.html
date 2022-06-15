@@ -1,0 +1,13 @@
+<div class="calendar-card">
+    <p>Calendar</p>
+    <p id="selected-date">{{monthNames[selected.getMonth()].toString() + ' ' + selected.getDate() + ', ' + selected.getFullYear()}}</p>
+    <div class="container calendar-icon">
+      
+    </div>
+    <mat-card class="demo-inline-calendar-card">
+        <mat-calendar [(selected)]= "selected" ></mat-calendar>
+    </mat-card>        
+</div>
+
+
+

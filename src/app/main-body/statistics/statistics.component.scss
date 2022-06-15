@@ -1,0 +1,43 @@
+.statistics-card {
+    width: 520px;
+    height: 350px;
+    border-radius: 3px;
+    filter: drop-shadow(0 0 60px rgba(31,32,41,0.1));
+    background-color: rgba($color: #ffffff, $alpha: 0.45); 
+    top: 80px;
+    left: 290px;
+    position: absolute;
+}
+.statistics-card p {   
+    margin-top: 10px;
+    margin-left: 15px
+}
+#statistics{
+    width: 400px !important;
+    height: 300px !important;
+    position: relative;
+    left: 40px;
+}
+.year-select{
+    background: none;
+    border: none;
+    position: absolute;
+    top: 10px;
+    left: 300px;
+    
+}
+.month-select{
+    background: none;
+    border: none;
+    position: absolute;
+    top: 10px;
+    left: 360px;
+}
+option {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    
+}
+option :hover{
+    background-color: #ddd;
+ } 

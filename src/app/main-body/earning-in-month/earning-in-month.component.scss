@@ -1,0 +1,59 @@
+.earning-card {
+    width: 250px;
+    height: 350px;
+    border-radius: 3px;
+    filter: drop-shadow(0 0 60px rgba(31,32,41,0.1));
+    background-color: rgba($color: #ffffff, $alpha: 0.45); 
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.earning-card p {   
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 15px
+}
+.line{
+    margin-left: 15px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    width: 220px;
+    height: 1px;
+    background-color:  #e4d6d5;;
+}
+.card-info{
+    width: 220px;
+    margin-left: 15px;
+    font-size: 11px;
+    line-height: 30px;
+    color: #b2b5b8;
+    font-weight: 500;
+    font-family: "Poppins";
+    .data{
+        color: #404447;
+        width: 55%;
+        text-align: right; 
+    }
+    td{
+        width: 45%;
+        
+    }
+}
+
+canvas{
+    width:150px !important;
+    height:150px !important;
+    position: relative;
+    left: 50px;
+    top: 30px;
+  }
+.percent-label{
+    position: absolute;
+    top: 23%;
+    left: 35%;
+    font-size: 24px;
+    letter-spacing: 2px;
+    line-height: 40px;
+    color: #404447;
+    font-weight: 600;
+    font-family: "Poppins";
+}

@@ -1,0 +1,106 @@
+.credit-card {
+    width: 250px;
+    height: 350px;
+    border-radius: 3px;
+    filter: drop-shadow(0 0 60px rgba(31,32,41,0.1));
+    background-color: rgba($color: #ffffff, $alpha: 0.45); 
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.credit-card p {   
+    margin-top: 10px;
+    margin-left: 15px
+}
+.card-image{
+    width: 220px;
+    height: 120px;
+    border-radius: 3px;
+    filter: drop-shadow(0px 13px 15px rgba(72,117,174,0.25));
+    background-image: url("../../../assets/img/credit-card-bg.png");
+    background-position: right 40% bottom 66%;
+    //justify-content: center;
+    margin-top: 30px;
+    margin-left: 15px;
+    
+}
+#type{
+    position: absolute;
+    left: -5px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    font-size: 10px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    width: auto;
+    color: #404447;
+    font-weight: 700;
+    font-style: italic;
+    font-family: "Poppins";
+    text-align:center; 
+    text-transform: uppercase;
+}
+#card-number{
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    font-size: 16px;
+    letter-spacing: 2px;
+
+    line-height: 40px;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: "Poppins";
+
+    margin-left: 0;
+    vertical-align: middle;
+    text-align:center; 
+}
+#date{
+    position: absolute;
+    top: 65px;
+    left: -5px;
+
+    font-size: 13px;
+    letter-spacing: 1px;
+    line-height: 40px;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: "Poppins";
+}
+#name{
+    position: absolute;
+    top: 65px;
+    right: 10px;
+    text-transform: uppercase;
+
+    font-size: 13px;
+    letter-spacing: 1px;
+    line-height: 40px;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: "Poppins";
+}
+.line{
+    margin-left: 15px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 220px;
+    height: 1px;
+    background-color:  #e4d6d5;;
+}
+.card-info{
+    width: 230px;
+    margin-left: 15px;
+    font-size: 11px;
+    line-height: 30px;
+    color: #b2b5b8;
+    font-weight: 500;
+    font-family: "Poppins";
+    .data{
+        color: #404447;
+        width: 55%;
+    }
+    td{
+        width: 45%;
+    }
+}

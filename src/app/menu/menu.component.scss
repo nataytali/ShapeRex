@@ -1,0 +1,86 @@
+// src/sass/styles.scss
+@import './menu.variables.scss';
+@import './menu.mixims.scss';
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+
+.menu-bg  {
+    width: 18%; 
+    min-width: 160px;
+    height: 850px; 
+    margin-left: 5%; 
+    margin-top: 60px; 
+    margin-bottom: 10%; 
+    border-radius: 4px; 
+    background-color: rgba(255, 250, 253, 0.5);
+    position: relative;
+    z-index: 10;
+
+}
+@media (max-width: 900px) {
+    .menu-bg{
+        margin-left: -50%; 
+        background-color: rgba(255, 250, 253, 1);
+        transition: all 0.7s ease-out;
+        width: 200px;
+    }
+}
+@media (min-width: 921px) {
+    .menu-bg{
+        margin-left: 5% !important; 
+    }
+}
+#logo{
+    margin-left: 15%;
+    height: 60px;
+    vertical-align: bottom;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    line-height: 27px;
+    color: #332d3d;
+    font-weight: 600;
+    font-family: 'Poppins';
+    padding: 20px 0 0 0;
+    img{
+        margin-bottom: 5px;
+    }
+}
+.menu{
+    background: none;
+    width: 80%; 
+    color: #332d3d;
+    margin-top: 5%; 
+    position: relative;
+    margin-left: 15%;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    line-height: 40px;
+    font-weight: 500;
+    font-family: "Poppins";
+}
+mat-sidenav-content{
+    &:hover{
+        color:#ff8600;
+        img{
+            filter: saturate(100) hue-rotate(160deg) brightness(1.5);
+        }
+    }
+    a{    
+        color: inherit;
+        text-decoration: inherit;   
+    }
+    
+}
+#logout{
+    margin-top: 440px;
+    &:hover{
+        color:#ff3a4c;
+      
+    }
+    img {
+        filter:  saturate(300%) hue-rotate(5deg) brightness(300%);
+    }
+}
+.active-menu-item{
+    color: #ff8600;
+}
