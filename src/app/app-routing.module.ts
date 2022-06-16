@@ -7,9 +7,9 @@ import { SiteLayoutComponent } from './shared/layouts/site-layout/site-layout.co
 
 const routes: Routes = [
   { path: '403', component: NotFoundComponent },
-  {path:'site', component: SiteLayoutComponent},
-  { path: '', redirectTo: '/site', pathMatch: 'full'},
-  
+  { path:'site', component: SiteLayoutComponent} ,
+  { path: '', redirectTo: '/site', pathMatch: 'full'}, 
+  { path: '**', redirectTo: '/403'}, 
 ];
 
 @NgModule({
